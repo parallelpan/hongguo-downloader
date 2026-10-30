@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="480" viewBox="0 0 820 480" role="img" aria-label="hongguo-downloader 系统架构图">
+  <title>hongguo-downloader 系统架构</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6e7681"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#101820"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="820" height="480" rx="14" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="819" height="479" rx="14" fill="none" stroke="#21262d"/>
+
+  <text x="32" y="34" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#6e7681" letter-spacing="1">SYSTEM ARCHITECTURE · 单机自愈 · 无公网入口</text>
+
+  <!-- 用户层 -->
+  <rect x="32" y="52" width="456" height="58" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="52" y="76" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="13.5" font-weight="600" fill="#e6edf3">浏览器 / 移动端</text>
+  <text x="52" y="95" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" fill="#8b949e">React 19 SPA · 只通过 JSON 与后端交互</text>
+
+  <line x1="260" y1="110" x2="260" y2="130" stroke="#6e7681" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Cloudflare -->
+  <rect x="32" y="132" width="456" height="50" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="52" y="155" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Cloudflare 边缘</text>
+  <text x="52" y="172" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" fill="#8b949e">TLS 终止 + Tunnel 主动外连 · 源站零公网端口</text>
+
+  <line x1="260" y1="182" x2="260" y2="202" stroke="#6e7681" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- API -->
+  <rect x="32" y="204" width="268" height="66" rx="8" fill="#161b22" stroke="#ff5a1f" stroke-opacity="0.5"/>
+  <text x="52" y="228" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">FastAPI · /api/v1</text>
+  <text x="52" y="249" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" fill="#8b949e">Auth · Catalog · Jobs · Wallet · Payments</text>
+
+  <line x1="300" y1="237" x2="330" y2="237" stroke="#6e7681" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="330" y1="251" x2="300" y2="251" stroke="#6e7681" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- DB -->
+  <rect x="332" y="204" width="156" height="66" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="352" y="228" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">MySQL 8.0</text>
+  <text x="352" y="249" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" fill="#8b949e">RDS · 仅内网 3306 · 9 张表</text>
+
+  <!-- API -> Worker -->
+  <line x1="166" y1="270" x2="166" y2="294" stroke="#6e7681" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="176" y="288" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10" fill="#6e7681">任务表 + CAS 乐观锁</text>
+
+  <!-- Worker -->
+  <rect x="32" y="296" width="268" height="66" rx="8" fill="#161b22" stroke="#ff5a1f" stroke-opacity="0.5"/>
+  <text x="52" y="320" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Worker 独立进程</text>
+  <text x="52" y="341" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" fill="#8b949e">逐集下载 · 校验 · 上传 · 超时回收</text>
+
+  <line x1="300" y1="329" x2="330" y2="329" stroke="#6e7681" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Device -->
+  <rect x="332" y="296" width="156" height="66" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="352" y="320" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">设备层</text>
+  <text x="352" y="341" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" fill="#8b949e">容器化实例 · 冷启动自检</text>
+
+  <!-- Worker -> OSS -->
+  <line x1="166" y1="362" x2="166" y2="386" stroke="#6e7681" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="176" y="380" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10" fill="#6e7681">分集上传（内网 endpoint）</text>
+
+  <!-- OSS -->
+  <rect x="32" y="388" width="456" height="54" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="52" y="411" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">OSS 私有桶</text>
+  <text x="52" y="429" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" fill="#8b949e">24h 预签名直链 · 支持 Range 断点续传 · 浏览器直连下载</text>
+
+  <!-- 直链回传虚线 -->
+  <path d="M488 415 H520 V81 H490" fill="none" stroke="#3fb950" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)" opacity="0.75"/>
+  <text x="528" y="86" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9.5" fill="#3fb950" opacity="0.9">直链</text>
+
+  <!-- 支付容器 -->
+  <rect x="560" y="204" width="228" height="238" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="576" y="228" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="11.5" font-weight="600" fill="#e6edf3">支付与入账</text>
+  <text x="576" y="243" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9.5" fill="#6e7681">双通道，官方查单为准</text>
+
+  <rect x="576" y="252" width="92" height="46" rx="6" fill="#0d1117" stroke="#30363d"/>
+  <text x="622" y="271" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" font-weight="600" fill="#e6edf3">Binance Pay</text>
+  <text x="622" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9" fill="#8b949e">金额 + 备注码</text>
+
+  <rect x="680" y="252" width="92" height="46" rx="6" fill="#0d1117" stroke="#30363d"/>
+  <text x="726" y="271" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" font-weight="600" fill="#e6edf3">Stripe</text>
+  <text x="726" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9" fill="#8b949e">Checkout</text>
+
+  <path d="M622 298 V310 H668" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+  <path d="M726 298 V310 H672" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+  <line x1="670" y1="310" x2="670" y2="326" stroke="#6e7681" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <rect x="576" y="328" width="196" height="42" rx="6" fill="#0d1117" stroke="#3fb950" stroke-opacity="0.45"/>
+  <text x="674" y="347" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="10.5" font-weight="600" fill="#e6edf3">对账入账</text>
+  <text x="674" y="361" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9" fill="#8b949e">回调只提速，不盲信</text>
+
+  <line x1="576" y1="384" x2="772" y2="384" stroke="#21262d" stroke-width="1"/>
+  <text x="576" y="402" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9.5" fill="#8b949e">入账 = 实付，尾差不截留</text>
+  <text x="576" y="418" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9.5" fill="#8b949e">扣费发生在「取件」而非建任务</text>
+  <text x="576" y="434" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" font-size="9.5" fill="#8b949e">并发取件只扣一次（唯一键）</text>
+</svg>
