@@ -24,7 +24,7 @@
   <img src="assets/badges/license.svg" height="20" alt="license" />
 </p>
 
-<sub>非官方项目，与红果 / 字节跳动无任何关联，未获其授权或认可。本仓库仅做产品与技术展示，<b>不包含业务实现代码</b>。</sub>
+<sub>非官方项目，与红果 / 字节跳动无任何关联。</sub>
 
 </div>
 
@@ -215,15 +215,6 @@ Stripe： 下单 → 建 Checkout session（metadata 带 order_id）→ 跳转�
 ---
 
 ## 常见问题
-
-<details>
-<summary><b>为什么不开放源代码？</b></summary>
-
-<br />
-
-因为这套系统的核心链路涉及第三方平台的内容取回与解密，公开实现等于公开规避手段，法律风险不可控。这里选择公开「工程怎么做」——架构、计费模型、对账口径、自愈流程、踩坑记录，这些才是可复用的部分。
-
-</details>
 
 <details>
 <summary><b>为什么按集计费，而不是会员制？</b></summary>
