@@ -206,7 +206,7 @@ Stripe： 下单 → 建 Checkout session（metadata 带 order_id）→ 跳转�
 
 | 项 | 值 |
 |---|---|
-| 主线版本 | v0.3.2 |
+| 主线版本 | v0.6.1 |
 | 线上地址 | <https://guoshi.app> |
 | 接口文档 | <https://guoshi.app/api/docs> |
 | 健康检查 | <https://guoshi.app/health> |
