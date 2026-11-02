@@ -2,10 +2,13 @@
 
 <img src="assets/logo.svg" width="76" alt="hongguo-downloader" />
 
-# 红果短剧批量下载工具 · hongguo-downloader
+# 红果短剧下载工具 · hongguo-downloader
 
 **红果短剧全集下载 · 批量下载 · 整剧打包** —— 粘贴一条分享链接，云端处理，按集付费取件。
 把「手动逐集存片」变成「一条链接」的下载交付系统，**在线版、免安装**，打开网页即可使用。
+
+Hongguo **short drama downloader**: paste one share link, and every episode is delivered from the cloud
+with per-episode pricing. No install and no app login — it runs in a browser, on phone or desktop.
 
 <p>
   <a href="https://guoshi.app?utm_source=github&utm_medium=readme&utm_campaign=hongguo-downloader">
@@ -28,7 +31,7 @@
 
 </div>
 
-![hongguo-downloader 首页](assets/screenshots/hero-home.png)
+![红果短剧下载工具 hongguo downloader 首页界面](assets/screenshots/hero-home.png)
 
 ---
 
@@ -46,6 +49,8 @@
 | 先付钱、不知道能不能下成 | **取件时才扣费**，失败不收费，重复取件不重复扣 |
 
 **和桌面客户端的区别**：**免安装**、不用配环境、不用自己合并转码 —— 打开网页就能用，手机同样可以操作。下载完成既可按**分集直链**逐集取，也可一次**整剧打包**。
+
+**其他常见叫法**：hongguo downloader、hongguo 短剧下载器、红果免费短剧下载工具、红果短剧批量导出、hongguo duanju downloader —— 指的都是这一个项目。
 
 ---
 
@@ -80,7 +85,7 @@
 
 <table>
 <tr>
-<td width="50%"><img src="assets/screenshots/series.png" alt="剧集详情" /></td>
+<td width="50%"><img src="assets/screenshots/series.png" alt="红果短剧剧集详情 · 选集与按集下载" /></td>
 <td width="50%"><img src="assets/screenshots/recharge.png" alt="余额与充值" /></td>
 </tr>
 <tr>
@@ -88,7 +93,7 @@
 <td align="center"><sub>余额与充值 · 卡密 / 在线支付双入口，流水逐笔可对</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="assets/screenshots/rank.png" alt="榜单" /></td>
+<td width="50%"><img src="assets/screenshots/rank.png" alt="红果短剧热播榜与真人榜" /></td>
 <td width="50%"><img src="assets/screenshots/jobs.png" alt="下载任务" /></td>
 </tr>
 <tr>
@@ -216,7 +221,27 @@ Stripe： 下单 → 建 Checkout session（metadata 带 order_id）→ 跳转�
 
 ---
 
-## 常见问题
+## 常见问题 · FAQ
+
+<details>
+<summary><b>红果短剧怎么下载到本地？</b></summary>
+
+<br />
+
+三步：复制红果 App 里的分享链接（或整段分享口令）→ 粘贴到在线版 → 解析后勾选要的集数取件。
+下载、校验、打包都在云端完成，下完拿到的是**分集直链或整剧 ZIP**，可以直接存到手机、电脑或网盘，不必守着 App 一集一集点。
+
+</details>
+
+<details>
+<summary><b>红果短剧下载要花钱吗？</b></summary>
+
+<br />
+
+解析、看榜单、浏览剧集信息都是免费的；<b>只有取件时才按实际集数计费</b>，下载失败的集不收费。
+本项目不提供会员制，也不卖「无限下载」——成本与集数线性相关，按集计费对双方都更清楚。
+
+</details>
 
 <details>
 <summary><b>支持红果免费短剧的全集下载吗？</b></summary>
@@ -251,6 +276,30 @@ Stripe： 下单 → 建 Checkout session（metadata 带 order_id）→ 跳转�
 <br />
 
 不会。失败的集不计费；已经扣费但交付失败的，走退款流水回补余额。
+
+</details>
+
+<details>
+<summary><b>Is there a Hongguo downloader for PC or Mac?</b></summary>
+
+<br />
+
+Yes — it is browser-based, so the same site works on Windows, macOS, Linux, Android and iOS.
+Nothing to install: you paste the share link, the cloud workers fetch and verify every episode,
+and you get either per-episode direct links or one ZIP for the whole drama.
+
+</details>
+
+<details>
+<summary><b>What is hongguo downloader?</b></summary>
+
+<br />
+
+`hongguo-downloader` is the open-source showcase of a cloud pipeline for Hongguo (红果) short dramas —
+the cdrama / duanju format where each drama is split into hundreds of 1–2 minute episodes.
+The pipeline resolves a share link, downloads every episode server-side, verifies each file,
+and delivers signed links priced per episode. This repository documents the design and architecture;
+no downloader binary or bypass tool is distributed here.
 
 </details>
 
