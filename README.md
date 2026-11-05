@@ -50,7 +50,7 @@ with per-episode pricing. No install and no app login — it runs in a browser, 
 
 **和桌面客户端的区别**：**免安装**、不用配环境、不用自己合并转码 —— 打开网页就能用，手机同样可以操作。下载完成既可按**分集直链**逐集取，也可一次**整剧打包**。
 
-**其他常见叫法**：hongguo downloader、hongguo 短剧下载器、红果免费短剧下载工具、红果短剧批量导出、hongguo duanju downloader —— 指的都是这一个项目。
+**其他常见叫法**：hongguo downloader、hongguo 短剧下载器、红果免费短剧下载工具、红果短剧批量导出、hongguo duanju downloader；海外那一栏对应 pine drama downloader / PineDrama —— 指的都是这一个项目。
 
 ---
 
@@ -70,6 +70,7 @@ with per-episode pricing. No install and no app login — it runs in a browser, 
 |---|---|
 | 解析 | 分享链接 / 分享口令 / 剧集编号三种输入；24 小时缓存，重复解析不重复请求上游 |
 | 发现 | 热播榜、真人榜、AI 榜、动漫榜四类榜单（6 小时刷新）；按剧名搜索，60 秒缓存 |
+| 海外 | 海外剧场（PineDrama）：榜单 + 14 个题材分类 + 中英文剧名搜索；英文原声直连 tiktokcdn，支持整包 ZIP 与简中 / 英文 / 西语字幕现翻 |
 | 任务 | 同剧同集自动复用运行中的任务，不重复扣费；失败集单独重试，可随时取消 |
 | 交付 | 分集直链 / 按需整剧打包 ZIP；直链默认以「附件」下发，点开即下载而不是在线播放；支持断点续传 |
 | 计费 | 余额 + 卡密 + 在线支付三通道；**扣费发生在取件**，`job_id` 唯一键保证并发取件只扣一次 |
@@ -304,12 +305,14 @@ no downloader binary or bypass tool is distributed here.
 </details>
 
 <details>
-<summary><b>PineDrama 的剧能用这个下载吗？</b></summary>
+<summary><b>PineDrama 的剧能下载吗？</b></summary>
 
 <br />
 
-不能。PineDrama 是 TikTok 在海外发行的短剧 App，账号体系与链接格式和红果完全不同，本站解析不了它的分享链接。
-两者只是「一集 1–2 分钟」的形态相近；搜 pine drama downloader 的话，这里不适用。
+能，站内「海外剧场」栏目就是 PineDrama：<https://guoshi.app/global>。
+按榜单或 14 个题材分类浏览，也可以直接搜剧名（中英文都行），打开剧集勾选集数即可。
+英文原声经 tiktokcdn 直连落盘，不需要模拟器、也不用装 App；支持按集取与整包 ZIP，
+字幕可现翻简中 / 英文 / 西语。海外剧与国内剧共用同一份余额和任务队列。
 
 </details>
 
