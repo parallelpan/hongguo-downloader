@@ -211,7 +211,7 @@ Stripe： 下单 → 建 Checkout session（metadata 带 order_id）→ 跳转�
 
 | 项 | 值 |
 |---|---|
-| 主线版本 | v0.6.1 |
+| 主线版本 | v0.16.0 |
 | 线上地址 | <https://guoshi.app> |
 | 接口文档 | <https://guoshi.app/api/docs> |
 | 健康检查 | <https://guoshi.app/health> |
@@ -300,6 +300,16 @@ the cdrama / duanju format where each drama is split into hundreds of 1–2 minu
 The pipeline resolves a share link, downloads every episode server-side, verifies each file,
 and delivers signed links priced per episode. This repository documents the design and architecture;
 no downloader binary or bypass tool is distributed here.
+
+</details>
+
+<details>
+<summary><b>PineDrama 的剧能用这个下载吗？</b></summary>
+
+<br />
+
+不能。PineDrama 是 TikTok 在海外发行的短剧 App，账号体系与链接格式和红果完全不同，本站解析不了它的分享链接。
+两者只是「一集 1–2 分钟」的形态相近；搜 pine drama downloader 的话，这里不适用。
 
 </details>
 
