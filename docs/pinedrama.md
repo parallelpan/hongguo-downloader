@@ -47,6 +47,23 @@ PineDrama 是 TikTok 在海外发行的短剧 App（`com.ss.android.ttmd.video`�
 
 ---
 
+## 界面
+
+<table>
+<tr>
+<td width="50%"><img src="../assets/screenshots/global-list.png" alt="PineDrama 海外剧场列表 · 题材分类与剧名搜索" /></td>
+<td width="50%"><img src="../assets/screenshots/global-series.png" alt="PineDrama 剧集详情 · 选集、字幕语言与下载清单" /></td>
+</tr>
+<tr>
+<td align="center"><sub>海外剧场 · 榜单、题材分类与剧名搜索</sub></td>
+<td align="center"><sub>剧集详情 · 按集勾选、字幕语言与下载清单</sub></td>
+</tr>
+</table>
+
+> 截图中的剧集海报版权归原权利方，仅作界面示意。
+
+---
+
 ## 支持的能力
 
 | 层 | 能力 |
