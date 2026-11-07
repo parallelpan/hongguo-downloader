@@ -2,10 +2,10 @@
 
 <img src="assets/logo.svg" width="76" alt="hongguo-downloader" />
 
-# 红果短剧下载工具 · hongguo-downloader
+# 红果短剧解析与下载工具 · hongguo-downloader
 
-**红果短剧全集下载 · 批量下载 · 整剧打包** —— 粘贴一条分享链接，云端处理，按集付费取件。
-把「手动逐集存片」变成「一条链接」的下载交付系统，**在线版、免安装**，打开网页即可使用。
+**红果短剧解析 · 全集下载 · 批量下载 · 整剧打包** —— 粘贴一条分享链接，云端解析全部集数后处理，按集付费取件。
+把「手动逐集存片」变成「一条链接」的解析与下载交付系统，**在线版、免安装**，打开网页即可使用。
 
 Hongguo **short drama downloader**: paste one share link, and every episode is delivered from the cloud
 with per-episode pricing. No install and no app login — it runs in a browser, on phone or desktop.
