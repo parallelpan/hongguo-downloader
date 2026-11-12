@@ -50,7 +50,9 @@ with per-episode pricing. No install and no app login — it runs in a browser, 
 
 **和桌面客户端的区别**：**免安装**、不用配环境、不用自己合并转码 —— 打开网页就能用，手机同样可以操作。下载完成既可按**分集直链**逐集取，也可一次**整剧打包**。
 
-**其他常见叫法**：hongguo downloader、hongguo 短剧下载器、红果免费短剧下载工具、红果短剧批量导出、hongguo duanju downloader；海外那一栏对应 [pine drama downloader / PineDrama](docs/pinedrama.md) —— 指的都是这一个项目。
+**其他常见叫法**：hongguo downloader、hongguo 短剧下载器、红果免费短剧下载工具、红果短剧批量导出、hongguo duanju downloader；
+海外两条线分别是 [pine drama downloader / PineDrama](docs/pinedrama.md) 与 [reelshort downloader / ReelShort 短剧下载](docs/reelshort.md)
+—— 指的都是这一个项目。
 
 ---
 
@@ -70,7 +72,8 @@ with per-episode pricing. No install and no app login — it runs in a browser, 
 |---|---|
 | 解析 | 分享链接 / 分享口令 / 剧集编号三种输入；24 小时缓存，重复解析不重复请求上游 |
 | 发现 | 热播榜、真人榜、AI 榜、动漫榜四类榜单（6 小时刷新）；按剧名搜索，60 秒缓存 |
-| 海外 | 海外剧场（PineDrama）：榜单 + 14 个题材分类 + 中英文剧名搜索；英文原声直连 tiktokcdn，支持整包 ZIP 与简中 / 英文 / 西语字幕现翻 · [专页](docs/pinedrama.md) |
+| 海外 · PineDrama | 海外剧场：榜单 + 14 个题材分类 + 中英文剧名搜索；英文原声直连 tiktokcdn，支持整包 ZIP 与简中 / 英文 / 西语字幕现翻 · [专页](docs/pinedrama.md) |
+| 海外 · ReelShort | 欧美向英文短剧（werewolf / revenge / billionaire 题材）：214 个题材标签 + 13 个榜单楼层 + 剧名搜索；HLS 直连封装 mp4，1080P 原画，支持整包 ZIP · [专页](docs/reelshort.md) |
 | 任务 | 同剧同集自动复用运行中的任务，不重复扣费；失败集单独重试，可随时取消 |
 | 交付 | 分集直链 / 按需整剧打包 ZIP；直链默认以「附件」下发，点开即下载而不是在线播放；支持断点续传 |
 | 计费 | 余额 + 卡密 + 在线支付三通道；**扣费发生在取件**，`job_id` 唯一键保证并发取件只扣一次 |
@@ -314,6 +317,32 @@ no downloader binary or bypass tool is distributed here.
 英文原声经 tiktokcdn 直连落盘，不需要模拟器、也不用装 App；支持按集取与整包 ZIP，
 字幕可现翻简中 / 英文 / 西语。海外剧与国内剧共用同一份余额和任务队列。
 能下什么、字幕怎么导出、有哪些限制，见 [PineDrama 专页](docs/pinedrama.md)。
+
+</details>
+
+<details>
+<summary><b>ReelShort 的剧能下载吗？</b></summary>
+
+<br />
+
+能，站内 [ReelShort 栏目](https://guoshi.app/reelshort) 就是它：按 New Release / TOP 等 13 个榜单楼层浏览，
+或用 214 个题材标签筛，也可以直接搜英文剧名（werewolf、billionaire 这类）。
+打开剧集勾选集数即可，云端按 HLS 拉流并封装成 mp4，完成后按集取直链或整包 ZIP。
+1080P 原画、**没有字幕**（上游不给），单集均值约 39 MB；与红果、PineDrama 共用同一份余额和任务队列，
+按集计费每集 0.01 U，取件才扣费。能下什么、有哪些限制，见 [ReelShort 专页](docs/reelshort.md)。
+
+</details>
+
+<details>
+<summary><b>Can I download ReelShort dramas?</b></summary>
+
+<br />
+
+Yes — ReelShort (the English vertical short-drama app, werewolf / revenge / billionaire titles) is wired into the
+same pipeline at <https://guoshi.app/reelshort>: browse 13 ranking floors or 214 genre tags, search an English title,
+pick episodes, and the cloud pulls each HLS segment and muxes it into a 1080p mp4. You then download per-episode
+links or one ZIP for the whole drama. Pricing is per episode (0.01 U each), charged only when you take delivery.
+ReelShort titles carry no subtitles upstream. Details: [ReelShort page](docs/reelshort.md).
 
 </details>
 
