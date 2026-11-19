@@ -4,7 +4,7 @@
 
 **英文竖屏短剧，云端拉流、按集取件** —— 榜单或搜剧名 → 勾选集数 → 云端把 HLS 分片封装成 mp4 → 分集直链或整包 ZIP。
 
-在线入口 <https://guoshi.app/reelshort>
+在线入口 <https://hongguoapi.com/reelshort>
 
 <sub>非官方项目，与 ReelShort / Crazy Maple Studio 无任何关联，未获其授权或认可。</sub>
 
@@ -17,7 +17,7 @@
 ReelShort 是面向欧美市场的竖屏短剧 App（`www.reelshort.com`），题材集中在 werewolf / revenge / billionaire 这几类，
 一部剧常见 50–70 集、每集 1–2 分钟，同样只提供「在 App 里一集一集看」。
 
-站内 [ReelShort 栏目](https://guoshi.app/reelshort) 把它接进和红果、PineDrama **同一套**下载交付系统：
+站内 [ReelShort 栏目](https://hongguoapi.com/reelshort) 把它接进和红果、PineDrama **同一套**下载交付系统：
 **找到剧、勾集数、云端下完、按集付费取件**，共用同一份余额和同一个任务队列。
 
 **常见叫法**：reelshort downloader、reelshort download、ReelShort 短剧下载、ReelShort 欧美短剧下载、
@@ -45,7 +45,7 @@ ReelShort 是面向欧美市场的竖屏短剧 App（`www.reelshort.com`），�
 
 | ① 进栏目 | ② 找到剧 | ③ 勾集数 | ④ 取件 |
 |---|---|---|---|
-| 打开 <https://guoshi.app/reelshort>，默认落在 New Release 楼层 | 按榜单楼层翻，或用 214 个题材标签筛；也可以直接搜英文剧名 | 打开剧集选具体集数，支持跨分段保留 | 提交任务后云端拉流封装；完成后按集取直链，或一次下整包 ZIP |
+| 打开 <https://hongguoapi.com/reelshort>，默认落在 New Release 楼层 | 按榜单楼层翻，或用 214 个题材标签筛；也可以直接搜英文剧名 | 打开剧集选具体集数，支持跨分段保留 | 提交任务后云端拉流封装；完成后按集取直链，或一次下整包 ZIP |
 
 **搜到即入库**：搜到的剧会立刻写进库里，之后从榜单和标签也能再次找到；搜不到说明上游还没有这部剧，换英文原名或换一个关键词再试。
 
@@ -99,7 +99,7 @@ ReelShort 是面向欧美市场的竖屏短剧 App（`www.reelshort.com`），�
 <div align="center">
 <sub>
 
-**[在线体验 ReelShort 栏目 →](https://guoshi.app/reelshort?utm_source=github&utm_medium=docs&utm_campaign=reelshort)** ·
+**[在线体验 ReelShort 栏目 →](https://hongguoapi.com/reelshort?utm_source=github&utm_medium=docs&utm_campaign=reelshort)** ·
 [回项目首页](https://github.com/parallelpan/hongguo-downloader)
 
 </sub>

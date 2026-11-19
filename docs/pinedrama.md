@@ -4,7 +4,7 @@
 
 **英文原声短剧，云端下载、按集取件** —— 榜单或搜剧名 → 勾选集数 → 云端直连 CDN 落盘 → 分集直链或整包 ZIP。
 
-在线入口 <https://guoshi.app/global>
+在线入口 <https://hongguoapi.com/global>
 
 <sub>非官方项目，与 TikTok / PineDrama 无任何关联，未获其授权或认可。</sub>
 
@@ -41,7 +41,7 @@ PineDrama 是 TikTok 在海外发行的短剧 App（`com.ss.android.ttmd.video`�
 
 | ① 进海外剧场 | ② 找到剧 | ③ 勾集数 | ④ 取件 |
 |---|---|---|---|
-| 打开 <https://guoshi.app/global>，默认落在「热门」 | 按「热门 / 全部 / 首页推荐」浏览，或用 14 个题材分类筛；也可以直接搜英文或中文剧名 | 打开剧集选具体集数，一屏能选完，支持跨分段保留 | 提交任务后云端下载；完成后按集取直链，或直接下整包 ZIP |
+| 打开 <https://hongguoapi.com/global>，默认落在「热门」 | 按「热门 / 全部 / 首页推荐」浏览，或用 14 个题材分类筛；也可以直接搜英文或中文剧名 | 打开剧集选具体集数，一屏能选完，支持跨分段保留 | 提交任务后云端下载；完成后按集取直链，或直接下整包 ZIP |
 
 **搜索即入库**：搜到的剧会立刻写进库里，之后能从分类和榜单里再次找到；搜不到说明上游还没有这部剧，换英文名或繁体名再试。
 
@@ -118,7 +118,7 @@ PineDrama 是 TikTok 在海外发行的短剧 App（`com.ss.android.ttmd.video`�
 <div align="center">
 <sub>
 
-**[去海外剧场 →](https://guoshi.app/global?utm_source=github&utm_medium=docs&utm_campaign=pinedrama)** · **[返回项目首页](../README.md)**
+**[去海外剧场 →](https://hongguoapi.com/global?utm_source=github&utm_medium=docs&utm_campaign=pinedrama)** · **[返回项目首页](../README.md)**
 
 </sub>
 </div>

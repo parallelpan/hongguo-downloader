@@ -11,8 +11,8 @@ Hongguo **short drama downloader**: paste one share link, and every episode is d
 with per-episode pricing. No install and no app login — it runs in a browser, on phone or desktop.
 
 <p>
-  <a href="https://guoshi.app?utm_source=github&utm_medium=readme&utm_campaign=hongguo-downloader">
-    <img src="assets/badges/cta-live.svg" height="34" alt="在线体验 guoshi.app" />
+  <a href="https://hongguoapi.com?utm_source=github&utm_medium=readme&utm_campaign=hongguo-downloader">
+    <img src="assets/badges/cta-live.svg" height="34" alt="在线体验 hongguoapi.com" />
   </a>
   &nbsp;
   <a href="#架构">
@@ -216,9 +216,9 @@ Stripe： 下单 → 建 Checkout session（metadata 带 order_id）→ 跳转�
 | 项 | 值 |
 |---|---|
 | 主线版本 | v0.16.0 |
-| 线上地址 | <https://guoshi.app> |
-| 接口文档 | <https://guoshi.app/api/docs> |
-| 健康检查 | <https://guoshi.app/health> |
+| 线上地址 | <https://hongguoapi.com> |
+| 接口文档 | <https://hongguoapi.com/api/docs> |
+| 健康检查 | <https://hongguoapi.com/health> |
 | 双通道支付 | Binance Pay + Stripe，均已端到端验证 |
 
 本仓库与大版本同步更新：每次正式发版后，README 与截图会跟着刷新。若你看到的状态与线上不符，欢迎开 issue 指出。
@@ -312,7 +312,7 @@ no downloader binary or bypass tool is distributed here.
 
 <br />
 
-能，站内「海外剧场」栏目就是 PineDrama：<https://guoshi.app/global>。
+能，站内「海外剧场」栏目就是 PineDrama：<https://hongguoapi.com/global>。
 按榜单或 14 个题材分类浏览，也可以直接搜剧名（中英文都行），打开剧集勾选集数即可。
 英文原声经 tiktokcdn 直连落盘，不需要模拟器、也不用装 App；支持按集取与整包 ZIP，
 字幕可现翻简中 / 英文 / 西语。海外剧与国内剧共用同一份余额和任务队列。
@@ -325,7 +325,7 @@ no downloader binary or bypass tool is distributed here.
 
 <br />
 
-能，站内 [ReelShort 栏目](https://guoshi.app/reelshort) 就是它：按 New Release / TOP 等 13 个榜单楼层浏览，
+能，站内 [ReelShort 栏目](https://hongguoapi.com/reelshort) 就是它：按 New Release / TOP 等 13 个榜单楼层浏览，
 或用 214 个题材标签筛，也可以直接搜英文剧名（werewolf、billionaire 这类）。
 打开剧集勾选集数即可，云端按 HLS 拉流并封装成 mp4，完成后按集取直链或整包 ZIP。
 1080P 原画、**没有字幕**（上游不给），单集均值约 39 MB；与红果、PineDrama 共用同一份余额和任务队列，
@@ -339,7 +339,7 @@ no downloader binary or bypass tool is distributed here.
 <br />
 
 Yes — ReelShort (the English vertical short-drama app, werewolf / revenge / billionaire titles) is wired into the
-same pipeline at <https://guoshi.app/reelshort>: browse 13 ranking floors or 214 genre tags, search an English title,
+same pipeline at <https://hongguoapi.com/reelshort>: browse 13 ranking floors or 214 genre tags, search an English title,
 pick episodes, and the cloud pulls each HLS segment and muxes it into a 1080p mp4. You then download per-episode
 links or one ZIP for the whole drama. Pricing is per episode (0.01 U each), charged only when you take delivery.
 ReelShort titles carry no subtitles upstream. Details: [ReelShort page](docs/reelshort.md).
@@ -361,7 +361,7 @@ ReelShort titles carry no subtitles upstream. Details: [ReelShort page](docs/ree
 <div align="center">
 <sub>
 
-**[在线体验 →](https://guoshi.app?utm_source=github&utm_medium=readme&utm_campaign=hongguo-downloader&utm_content=footer)** · 有问题请开 issue，只接受文档纠错
+**[在线体验 →](https://hongguoapi.com?utm_source=github&utm_medium=readme&utm_campaign=hongguo-downloader&utm_content=footer)** · 有问题请开 issue，只接受文档纠错
 
 </sub>
 </div>
